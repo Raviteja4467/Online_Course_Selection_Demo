@@ -1,0 +1,80 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="#">Explore</a></li>
+                    <li><a href="/course">Categories</a></li>
+                    <li><a >{{getUser}}<button class="btn-danger" (click)="logout()">logout</button></a></li>
+                    <li><a href="#" class="btn-signup">Join for Free</a></li>
+                    <!-- <li><a (click)="passCourses()" id="cart-btn">Cart (<span id="cart-count">{{count}}</span>)</a></li> -->
+                    <li><a id="cart-btn" routerLink="/cart">Cart (<span id="cart-count">{{count}}</span>)</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <div class="poster">
+        <img src="../../../assets/img/blog.png" alt="" width="100%">
+    </div>
+
+    <!-- Categories Section -->
+
+<!-- /////////// Using manual insertion //////////////// -->
+
+    <div class="container">
+        <div class="row">
+            <div *ngFor="let product of products;" class="col-12 col-md-4 col-sm-6">
+                <div class="movies">
+                    <div class="movie" style="margin: 10px;">
+                        <a href="/java"><img src={{product.img}} alt="courses for sale"></a>
+                        <h3>{{product.name}}</h3>
+                        <p class="description">{{product.description}}</p>
+                        <p style="color: red;">{{product.off}}</p>
+                        <p>orginalprice :<s>₹{{product.oldprice}}</s></p>
+                        <p>newprice : ₹{{product.newprice}}</p>
+                        <button class="add-to-cart" (click)="triggers(product)" [disabled]="off[product.id]"
+                            [style.backgroundColor]="off[product.id]?'grey':''">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<!-- /////////////////////////////////////////////////// -->
+
+<!-- //////////////////  Using API  //////////////////// -->
+
+    <!-- <div class="container">
+        <div class="row">
+            <div *ngFor="let product of ids;" class="col-12 col-md-4 col-sm-6">
+                <div class="movies">
+                    <div class="movie" style="margin: 10px;">
+                        <a href="/java"><img src={{product.img}} alt="courses for sale"></a>
+                        <h3>{{product.name}}</h3>
+                        <p class="description">{{product.description}}</p>
+                        <p>{{product.off}}</p>
+                        <button class="add-to-cart" (click)="triggers(product.id)" [disabled]="off[product.id]"
+                            [style.backgroundColor]="off[product.id]?'grey':''">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> -->
+
+<!-- ///////////////////////////////////////////// -->
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="social-icons">
+                <a href="#" class="fa fa-facebook"></a>
+                <a href="#" class="fa fa-twitter"></a>
+                <a href="#" class="fa fa-instagram"></a>
+            </div>
+            <p>&copy; 2024 Coursera Clone. All rights reserved.</p>
+        </div>
+    </footer>
+</body>

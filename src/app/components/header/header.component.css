@@ -1,0 +1,43 @@
+
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: white
+}
+
+.header {
+    background-color: #333;
+    color: white;
+    padding: 25px 0;
+}
+
+.nav-links {
+    list-style-type: none;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.nav-links li {
+    margin: 0 15px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+}
+
+
+
+.btn-signup {
+    background-color: #ff7600;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    color: white;
+}

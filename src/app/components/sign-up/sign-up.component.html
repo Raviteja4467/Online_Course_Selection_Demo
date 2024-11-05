@@ -1,0 +1,41 @@
+<body>
+  <div class="registration_form">
+    <form [formGroup]="registerForm2" (ngSubmit)="postData()">
+      <div class="form-group mb-md-4">
+        <h3 style="color: white;">Sign Up</h3>
+      </div>
+      <div class="form-group mb-md-4">
+        <input type="text" class="form-control" formControlName="email" placeholder="Enter your email"
+          [class.is-invalid]="email.touched && email.invalid ">
+
+      </div>
+      <div class="form-group mb-md-4">
+        <input type="password" class="form-control" formControlName="password" placeholder="Enter your password"
+          [class.is-invalid]="password.touched && password.invalid ">
+      </div>
+      <div class="form-group mb-md-4">
+        <input type="password" class="form-control" formControlName="repeatpassword" placeholder="Enter your password"
+          [class.is-invalid]="repeatpassword.touched && repeatpassword.invalid ">
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox" id="disabledFieldsetCheck">
+        <label class="form-check-label" for="disabledFieldsetCheck" style="color: white;">
+          Remember Me
+        </label>
+      </div>
+      <div class="form-group mb-md-4">
+        <p style="color: white;">By creating an account you agree to our <a href="#" style="color:dodgerblue">Terms &
+            Privacy</a></p>
+        <p style="color: white;">If you already have an account click here <a href="/login"
+            style=" color:dodgerblue"><b>Login</b></a></p>
+      </div>
+      <button class="btn btn-danger" type="reset" value="reset"> Cancle</button>
+      <button class=" btn btn-success" style="margin-left: 5px;"> SignUp</button>
+
+    </form>
+
+  </div>
+  <div *ngIf="showSuccessAlert" class="alert alert-success" role="alert" style="margin-top: 20px;">
+    {{ alert1 }}
+  </div>
+</body>

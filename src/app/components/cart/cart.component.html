@@ -1,0 +1,59 @@
+<!-- <app-header></app-header> -->
+<header class="header">
+    <div class="container">
+        <nav>
+            <ul class="nav-links">
+                <li><a href="#">Explore</a></li>
+                <li><a href="/course">Categories</a></li>
+                <li><a >{{getUser}}<button class="btn-danger" (click)="logout()">logout</button></a></li>
+                <li><a href="#" class="btn-signup">Join for Free</a></li>
+                <!-- <li><a (click)="passCourses()" id="cart-btn">Cart (<span id="cart-count">{{count}}</span>)</a></li> -->
+                <!-- <li><a id="cart-btn" routerLink="/cart">Cart (<span id="cart-count">{{count}}</span>)</a></li> -->
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<h1>Cart</h1>
+
+<div class="container">
+    <div class="row" style="margin: 0px 0px 150px 0px;">
+        <div *ngFor="let course of getCartDetails" class="col-12 col-md-4 col-sm-6" style="position: relative;">
+            <div class="movies ">
+                <div class="movie">
+                    <a href="/java"> <img src={{course.img}} alt="courses for sale"></a>
+                    <h3>{{course.name}}</h3>
+                    <p class="description">{{course.description}}</p>
+                    <p style="color: red;">{{course.off}}</p>
+                    <p>orginalprice :<s>{{course.oldprice}}</s></p>
+                    <p>newprice : {{course.newprice}}</p>
+                    <button (click)="delete(course.id)">Remove</button>
+                </div>
+            </div>
+        </div>
+        <div class="offset-md-2 col-md-8 total-container" >
+            <table >
+                <th>
+                    <h1>Total</h1>
+                </th>
+                <th>
+                    <h1>-</h1>
+                </th>
+                <th>
+                    <h1>₹{{total}}</h1>
+                </th>
+            </table>
+        </div>
+    </div>
+</div>
+
+<footer style="position:fixed;">
+    <div class="social-icons">
+        <a href="#" class="fa fa-facebook"></a>
+        <a href="#" class="fa fa-twitter"></a>
+        <a href="#" class="fa fa-instagram"></a>
+    </div>
+    <p style="padding:10px 0px 0px 0px; margin:0px;">&copy; 2024 CopyRight. All rights reserved.</p>
+</footer>

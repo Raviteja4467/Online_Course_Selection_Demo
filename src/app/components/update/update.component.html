@@ -1,0 +1,24 @@
+<div class="container d-flex justify-content-center align-items-center" style="min-height: 100vh;">
+    <div class="registration_form w-50">
+      <form [formGroup]="registrationForm" (ngSubmit)="updateUser()">
+        <div class="form-group mb-3">
+          <input type="text" class="form-control" formControlName="username" [class.is-invalid]="username.touched && username.invalid">
+        </div>
+        <div class="form-group mb-3">
+          <input type="text" class="form-control" formControlName="email" [class.is-invalid]="email.touched && email.invalid">
+        </div>
+        <div class="form-group mb-3">
+          <input type="text" class="form-control" formControlName="mobileno" [class.is-invalid]="mobileno.touched && mobileno.invalid">
+        </div>
+        <div class="form-group mb-3">
+          <input type="text" class="form-control" formControlName="age" [class.is-invalid]="age.touched && age.invalid">
+        </div>
+        <div class="form-group mb-3">
+          <input type="text" class="form-control" formControlName="id" [disabled]="'true'">
+        </div>
+        <button class="btn btn-primary" type="submit">Update</button>
+        <a class="btn btn-danger" style="margin-left: 5px;" href="/home">Cancel</a>
+      </form>
+    </div>
+  </div>
+  

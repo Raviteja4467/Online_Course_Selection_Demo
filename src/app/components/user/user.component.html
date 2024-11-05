@@ -1,0 +1,75 @@
+
+<div class="container mt-2">
+    <div class="nav nav-tabs" id="nav-tab" role="tablist">
+        <button class="nav-link active" id="nav-home-tab" data-bs-toggle="tab" data-bs-target="#nav-home" type="button"
+            role="tab" aria-controls="nav-home" aria-selected="true">Add User</button>
+        <button class="nav-link" id="nav-profile-tab" data-bs-toggle="tab" data-bs-target="#nav-profile" type="button"
+            role="tab" aria-controls="nav-profile" aria-selected="false">User List</button>
+    </div>
+    <div class="tab-content" id="nav-tabContent">
+        <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
+            <br><br>
+            
+            <div class="registration_form">
+                <form [formGroup]="registrationForm" (ngSubmit)="postData()">
+                    <div class="form-group mb-3">
+                        <input type="text" class="form-control" formControlName="username"  placeholder="Enter your username"  [class.is-invalid]="username.touched && username.invalid ">
+                       
+                    </div>
+                    <div class="form-group mb-3">
+                        <input type="text" class="form-control" formControlName="email" placeholder="Enter your email" [class.is-invalid]="email.touched && email.invalid ">
+                    </div>
+                    <div class="form-group mb-3">
+                        <input type="text" class="form-control" formControlName="mobileno" placeholder="Enter your mobile no" [class.is-invalid]="mobileno.touched && mobileno.invalid ">
+                    </div>
+                    <div class="form-group mb-3">
+                        <input type="text" class="form-control" formControlName="age" placeholder="Enter your age" [class.is-invalid]=" age.touched &&  age.invalid ">
+                    </div>
+                    <div class="form-group mb-3">
+                        <input type="text" class="form-control" formControlName="id" placeholder="Enter your id" [class.is-invalid]="id.touched && id.invalid ">
+                    </div>
+              
+                    <button class="btn btn-primary"  > ADD</button>
+                    <button class=" btn btn-danger" style="margin-left: 5px;" type="reset" value="reset"> RESET</button>
+
+                </form>
+
+              </div>
+        </div>
+        <!-- close -->
+        <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
+            <table class="table">
+                <thead>
+                  <tr>
+                    <th scope="col">username</th>
+                    <th scope="col">email</th>
+                    <th scope="col">mobileno</th>
+                    <th scope="col">age</th>
+                    <th scope="col">id</th>
+                    <th scope="col">Delete</th>
+                    <th scope="col">Update</th>
+                  </tr>
+                </thead>
+                <tbody>
+                    <tr  *ngFor="let data of ids">
+                        <th>{{data.username}}</th>
+                        <th>{{data.email}}</th>
+                        <th>{{data.mobileno}}</th>
+                        <th>{{data.age}}</th>
+                        <th>{{data.id}}</th>
+                        <th >
+                            <Button (click)="deleteUser(data.id)" class="">
+                                <img src="../../../assets/img/delete.png" width="20px" height="20px" alt="">
+                            </Button>
+                        </th>
+                        <th >
+                            <Button class="" routerLink="/update/{{data.id}}">
+                                <img src="../../../assets/img/refresh.png" width="20px" height="20px" alt="">
+                            </Button>
+                        </th>
+                      </tr>
+                </tbody>
+              </table>
+        </div>
+    </div>
+</div>

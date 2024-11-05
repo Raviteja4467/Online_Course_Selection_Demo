@@ -1,0 +1,144 @@
+
+/* General styling */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa;
+    margin: 0;
+    padding: 20px;
+}
+
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff3cd;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+/* Tabs */
+.nav-tabs {
+    border-bottom: 2px solid #007bff;
+}
+
+.nav-tabs .nav-link {
+    color: #007bff;
+    border: none;
+    border-bottom: 2px solid transparent;
+}
+
+.nav-tabs .nav-link.active {
+    background-color: transparent;
+    color: #000;
+    border-color: #007bff;
+    font-weight: bold;
+}
+
+/* Tab content */
+.tab-content {
+    padding-top: 20px;
+}
+
+/* Form styling */
+.registration_form {
+    padding: 20px;
+    background-color:#ffc107;
+    border-radius: 8px;
+}
+
+.form-group input {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.form-group input.is-invalid {
+    border-color: #dc3545;
+}
+
+.form-group input:focus {
+    outline: none;
+    border-color: #007bff;
+    box-shadow: 0 0 4px rgba(0, 123, 255, 0.25);
+}
+
+button {
+    font-size: 16px;
+    padding: 8px 15px;
+}
+
+button[type="reset"] {
+    background-color: #dc3545;
+    color: white;
+    border: none;
+    padding: 8px 15px;
+}
+
+button[type="reset"]:hover {
+    background-color: #c82333;
+}
+
+/* Table styling */
+table {
+    width: 100%;
+    margin-top: 20px;
+    border-collapse: collapse;
+}
+
+table th, table td {
+    padding: 12px 15px;
+    text-align: left;
+    border: 1px solid #ddd;
+}
+
+table thead {
+    background-color: #007bff;
+    color: rgb(255, 255, 255);
+}
+
+table tbody tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+table tbody tr:hover {
+    background-color: #e9ecef;
+}
+
+table button {
+    padding: 5px 10px;
+    font-size: 14px;
+}
+
+.btn-info {
+    background-color: #17a2b8;
+    border: none;
+    color: white;
+}
+
+.btn-info:hover {
+    background-color: #138496;
+}
+
+.btn-danger:hover {
+    background-color: #c82333;
+}
+
+@media (max-width: 768px) {
+    .container {
+        padding: 10px;
+    }
+
+    .nav-tabs .nav-link {
+        font-size: 14px;
+    }
+
+    table th, table td {
+        font-size: 14px;
+    }
+
+    button {
+        font-size: 14px;
+        padding: 7px 12px;
+    }
+}

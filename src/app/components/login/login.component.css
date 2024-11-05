@@ -1,0 +1,129 @@
+/* Styling the background and centering the page content */
+body {
+  background: linear-gradient(135deg, #1c1c1c, #606060, #b3b3b3);
+  font-family: Arial, sans-serif;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+}
+
+/* Styling the registration form container */
+.registration_form {
+  background: linear-gradient(135deg,  #b3b3b3, #606060, #1c1c1c);
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 600px;
+  text-align: center;
+  margin: auto;
+  /* margin-top: 200px; */
+}
+
+/* Styling the form input fields */
+.form-control {
+  border-radius: 5px;
+  border: 1px solid #ced4da;
+  padding: 10px;
+  font-size: 16px;
+  margin-bottom: 15px;
+}
+
+/* Aligning the checkbox and label horizontally */
+.form-check {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  margin-bottom: 15px;
+}
+
+/* Checkbox styling */
+.form-check-input {
+  margin-right: 10px;
+  width: 20px;
+  height: 20px;
+}
+
+.form-check-label {
+  font-size: 14px;
+}
+
+/* Button styles */
+.btn {
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 5px;
+  width: 100px;
+}
+
+.btn-danger {
+  background-color: #ff4d4d;
+  border: none;
+}
+
+.btn-success {
+  background-color: #28a745;
+  border: none;
+  margin-left: 10px;
+}
+
+.btn:hover {
+  opacity: 0.9;
+}
+
+/* Aligning buttons */
+button {
+  margin-top: 10px;
+}
+
+
+
+
+/*   alert    */
+
+/* Customize the alert background color */
+.alert-success {
+  background-color: #d4edda; /* Default Bootstrap success background */
+  border-color: #c3e6cb; /* Default Bootstrap success border */
+  color: #155724;        /* Default Bootstrap success text color */
+}
+
+.alert-danger {
+  background-color: #f8d7da; /* Default Bootstrap danger background */
+  border-color: #f5c6cb;     /* Default Bootstrap danger border */
+  color: #721c24;            /* Default Bootstrap danger text color */
+}
+
+
+/* Add some padding and margins */
+.alert {
+  padding: 15px;
+  margin: 10px 0;
+  border-radius: 5px;
+  font-size: 16px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Add a subtle box shadow */
+  width: 80%; /* Adjust width as per your requirement */
+  position: absolute;
+  top: 20px; /* Set how far from the top of the page */
+  left: 50%; /* Center horizontally */
+  transform: translateX(-50%); /* Ensure true centering */
+}
+
+/* For additional customization */
+.alert-success {
+  font-weight: bold;
+  letter-spacing: 0.5px;
+}
+
+.alert-danger {
+  font-weight: bold;
+  letter-spacing: 0.5px;
+}
+
+/* Make alert dismissible button more visible (if added later) */
+.alert-dismissible .close {
+  color: #155724;
+  opacity: 1;
+}
